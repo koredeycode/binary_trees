@@ -42,4 +42,18 @@ int binary_tree_balance(const binary_tree_t *tree);
 int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+/**
+ * struct queue_s - queue data structure
+ *
+ * @node: pointer to a binary tree node
+ * @prev: Pointer to the prev node
+ * @next: pointer to the next node
+ */
+typedef struct queue_s
+{
+	binary_tree_t *node;
+	struct queue_s *prev;
+	struct queue_s *next;
+} queue_t;
 #endif /* _BINARY_TREES_H_ */
